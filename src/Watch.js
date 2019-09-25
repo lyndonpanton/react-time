@@ -20,30 +20,6 @@ class Watch extends React.Component {
 		}, 1000);
 	}
 
-	resetDigits = () => {
-		for (let digit in this.state) {
-			this.setState({
-				[digit]: 0
-			});
-		}
-	}
-
-	setDigit = (digit) => {
-		if (digit.slice(digit.length -3, digit.length) === "Ten" && digit !== "hourTen" && this.state[digit] > 4) {
-			this.setState({
-				[digit]: 0
-			});
-
-			this.resetDigit(digit);
-		} else if (this.state[digit] < 9) {
-			this.setState({
-				[digit]: this.state[digit] + 1
-			});
-		} else {
-			this.resetDigit(digit);
-		}
-	}
-
 	resetDigit = (digit) => {
 		this.setState({
 			[digit]: 0
@@ -77,10 +53,42 @@ class Watch extends React.Component {
 		}
 	}
 
+	recordDigits = () => {
+		
+	}
+
+	resetDigits = () => {
+		for (let digit in this.state) {
+			this.setState({
+				[digit]: 0
+			});
+		}
+	}
+
+	setDigit = (digit) => {
+		if (digit.slice(digit.length -3, digit.length) === "Ten" && digit !== "hourTen" && this.state[digit] > 4) {
+			this.setState({
+				[digit]: 0
+			});
+
+			this.resetDigit(digit);
+		} else if (this.state[digit] < 9) {
+			this.setState({
+				[digit]: this.state[digit] + 1
+			});
+		} else {
+			this.resetDigit(digit);
+		}
+	}
+
+	startDigits = () => {
+
+	}
+
 	stopDigits = () => {
 		clearInterval(this.timer);
-		this.resetDigits();
 	}
+
 
 	tick = () => {
 		this.setDigit("secondOne");
@@ -104,10 +112,10 @@ class Watch extends React.Component {
 					</div>
 				</div>
 
-				<Button type="start" />
-				<Button type="stop" />
-				<Button type="reset" />
-				<Button type="record" />
+				<Button type="start" handleClick={() => this.startDigits()} />
+				<Button type="stop" handleClick={() => this.stopDigits()} />
+				<Button type="reset" handleClick={() => this.resetDigits()} />
+				<Button type="record" handleClick={() => this.recordDigits()} />
 			</div>
 		);
 	}
