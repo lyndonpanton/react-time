@@ -29,37 +29,47 @@ class Watch extends React.Component {
 	}
 
 	setDigit = (digit) => {
-		if (this.state[digit] < 9) {
-			this.setState({
-				[digit]: this.state[digit] + 1
-			});
-		} else {
+		if (digit.slice(digit.length -3, digit.length) === "Ten" && this.state[digit] > 4) {
 			this.setState({
 				[digit]: 0
 			});
 
-			switch(digit) {
-				case "secondOne":
-					this.setDigit("secondTen");
-					break;
-				case "secondTen":
-					this.setDigit("minuteOne");
-					break;
-				case "minuteOne":
-					this.setDigit("minuteTen");
-					break;
-				case "minuteTen":
-					this.setDigit("hourOne");
-					break;
-				case "hourOne":
-					this.setDigit("hourTen");
-					break;
-				case "hourTen":
-					// clock reset/stop logic
-					this.resetDigits();
-					// this.stopDigits();
-					break;
-			}
+			this.resetDigit(digit);
+		} else if (this.state[digit] < 9) {
+			this.setState({
+				[digit]: this.state[digit] + 1
+			});
+		} else {
+			this.resetDigit(digit);
+		}
+	}
+
+	resetDigit = (digit) => {
+		this.setState({
+			[digit]: 0
+		});
+
+		switch(digit) {
+			case "secondOne":
+				this.setDigit("secondTen");
+				break;
+			case "secondTen":
+				this.setDigit("minuteOne");
+				break;
+			case "minuteOne":
+				this.setDigit("minuteTen");
+				break;
+			case "minuteTen":
+				this.setDigit("hourOne");
+				break;
+			case "hourOne":
+				this.setDigit("hourTen");
+				break;
+			case "hourTen":
+				// clock reset/stop logic
+				this.resetDigits();
+				// this.stopDigits();
+				break;
 		}
 	}
 
