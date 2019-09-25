@@ -29,11 +29,32 @@ class Watch extends React.Component {
 			this.setState({
 				[digit]: 0
 			});
+
+			switch(digit) {
+				"secondOne":
+					this.setDigit("secondTen");
+					break;
+				"secondTen":
+					this.setDigit("minuteOne");
+					break;
+				"minuteOne":
+					this.setDigit("minuteTen");
+					break;
+				"minuteTen":
+					this.setDigit("hourOne");
+					break;
+				"hourOne":
+					this.setDigit("hourTen");
+					break;
+				"hourTen":
+					// clock reset/stop logic
+					break;
+			}
 		}
 	}
 
 	tick = () => {
-		setDigit("secondOne");
+		this.setDigit("secondOne");
 	}
 
 	render() {
