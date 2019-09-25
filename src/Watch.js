@@ -58,7 +58,29 @@ class Watch extends React.Component {
 	}
 
 	render() {
-
+		return (
+			<div className="watch">
+				<div className="time">
+					<div className="seconds">
+						<span className="second">{this.state.secondOne}</span>
+						<span className="second">{this.state.secondTen}</span>
+					</div>
+					<div className="minutes">
+						<span className="minute">{this.state.minuteOne}</span>
+						<span className="minute">{this.state.minuteTen}</span>
+					</div>
+					<div className="hours">
+						<span className="hour">{this.state.hourOne}</span>
+						<span className="hour">{this.state.hourTen}</span>
+					</div>
+				</div>
+				
+				<Button type="start" />
+				<Button type="stop" />
+				<Button type="reset" />
+				<Button type="record" />
+			</div>
+		);
 	}
 }
 
