@@ -20,6 +20,14 @@ class Watch extends React.Component {
 		}, 1000);
 	}
 
+	resetDigits = () => {
+		for (let digit in this.state) {
+			this.setState({
+				[digit]: 0
+			});
+		}
+	}
+
 	setDigit = (digit) => {
 		if (this.state[digit] < 9) {
 			this.setState({
@@ -48,6 +56,7 @@ class Watch extends React.Component {
 					break;
 				"hourTen":
 					// clock reset/stop logic
+					this.resetDigits();
 					break;
 			}
 		}
@@ -74,7 +83,7 @@ class Watch extends React.Component {
 						<span className="hour">{this.state.hourTen}</span>
 					</div>
 				</div>
-				
+
 				<Button type="start" />
 				<Button type="stop" />
 				<Button type="reset" />
