@@ -20,6 +20,16 @@ class Watch extends React.Component {
 		}
 	}
 
+	componentDidMount() {
+		this.timer = setInterval(() => {
+			this.tick();
+		}, 1000)
+	}
+
+	tick = () => {
+
+	}
+
 	render() {
 
 	}
