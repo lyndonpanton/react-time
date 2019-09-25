@@ -15,9 +15,7 @@ class Watch extends React.Component {
 	}
 
 	componentDidMount() {
-		this.timer = setInterval(() => {
-			this.tick();
-		}, 1000);
+		
 	}
 
 	resetDigit = (digit) => {
@@ -54,7 +52,7 @@ class Watch extends React.Component {
 	}
 
 	recordDigits = () => {
-		
+
 	}
 
 	resetDigits = () => {
@@ -82,7 +80,9 @@ class Watch extends React.Component {
 	}
 
 	startDigits = () => {
-
+		this.timer = setInterval(() => {
+			this.tick();
+		}, 1000);
 	}
 
 	stopDigits = () => {
