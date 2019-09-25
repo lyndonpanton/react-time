@@ -5,29 +5,23 @@ class Watch extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			seconds: [
-				0,
-				0
-			],
-			minutes: [
-				0,
-				0
-			],
-			hours: [
-				0,
-				0
-			]
+			secondOne: 0,
+			secondTen: 0
+			minuteOne: 0,
+			minuteTen: 0,
+			hourOne: 0,
+			hourTen: 0
 		}
 	}
 
 	componentDidMount() {
 		this.timer = setInterval(() => {
 			this.tick();
-		}, 1000)
+		}, 1000);
 	}
 
 	tick = () => {
-
+		
 	}
 
 	render() {
