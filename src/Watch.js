@@ -57,9 +57,15 @@ class Watch extends React.Component {
 				"hourTen":
 					// clock reset/stop logic
 					this.resetDigits();
+					// this.stopDigits();
 					break;
 			}
 		}
+	}
+
+	stopDigits = () => {
+		clearInterval(this.timer);
+		this.resetDigits();
 	}
 
 	tick = () => {
