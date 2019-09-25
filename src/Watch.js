@@ -70,6 +70,10 @@ class Watch extends React.Component {
 				this.resetDigits();
 				// this.stopDigits();
 				break;
+			default:
+				this.resetDigits();
+				console.log("an error occured");
+				break;
 		}
 	}
 
