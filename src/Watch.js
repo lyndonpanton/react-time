@@ -6,7 +6,7 @@ class Watch extends React.Component {
 		super(props);
 		this.state = {
 			secondOne: 0,
-			secondTen: 0
+			secondTen: 0,
 			minuteOne: 0,
 			minuteTen: 0,
 			hourOne: 0,
@@ -39,22 +39,22 @@ class Watch extends React.Component {
 			});
 
 			switch(digit) {
-				"secondOne":
+				case "secondOne":
 					this.setDigit("secondTen");
 					break;
-				"secondTen":
+				case "secondTen":
 					this.setDigit("minuteOne");
 					break;
-				"minuteOne":
+				case "minuteOne":
 					this.setDigit("minuteTen");
 					break;
-				"minuteTen":
+				case "minuteTen":
 					this.setDigit("hourOne");
 					break;
-				"hourOne":
+				case "hourOne":
 					this.setDigit("hourTen");
 					break;
-				"hourTen":
+				case "hourTen":
 					// clock reset/stop logic
 					this.resetDigits();
 					// this.stopDigits();
