@@ -29,7 +29,7 @@ class Watch extends React.Component {
 	}
 
 	setDigit = (digit) => {
-		if (digit.slice(digit.length -3, digit.length) === "Ten" && this.state[digit] > 4) {
+		if (digit.slice(digit.length -3, digit.length) === "Ten" && digit === "hourTen" && this.state[digit] > 4) {
 			this.setState({
 				[digit]: 0
 			});
