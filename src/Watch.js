@@ -76,17 +76,17 @@ class Watch extends React.Component {
 		return (
 			<div className="watch">
 				<div className="time">
-					<div className="seconds">
-						<span className="second">{this.state.secondOne}</span>
-						<span className="second">{this.state.secondTen}</span>
+					<div className="hours">
+						<span className="hour">{this.state.hourTen}</span>
+						<span className="hour">{this.state.hourOne}</span>
 					</div>
 					<div className="minutes">
-						<span className="minute">{this.state.minuteOne}</span>
 						<span className="minute">{this.state.minuteTen}</span>
+						<span className="minute">{this.state.minuteOne}</span>
 					</div>
-					<div className="hours">
-						<span className="hour">{this.state.hourOne}</span>
-						<span className="hour">{this.state.hourTen}</span>
+					<div className="seconds">
+						<span className="second">{this.state.secondTen}</span>
+						<span className="second">{this.state.secondOne}</span>
 					</div>
 				</div>
 
