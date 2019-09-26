@@ -26,6 +26,12 @@ class Watch extends React.Component {
 		});
 
 		switch(digit) {
+			case "millisecondTen":
+				this.setDigit("millisecondHundred");
+				break;
+			case "millisecondHundred":
+				this.setDigit("millisecondTen");
+				break;
 			case "secondOne":
 				this.setDigit("secondTen");
 				break;
@@ -114,7 +120,7 @@ class Watch extends React.Component {
 					</div>
 					<div className="milliseconds">
 						<span className="millisecond">{this.state.millisecondHundred}</span>
-							<span className="millisecond">{this.state.millisecondTen}</span>
+						<span className="millisecond">{this.state.millisecondTen}</span>
 					</div>
 				</div>
 
