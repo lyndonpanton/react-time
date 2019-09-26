@@ -5,6 +5,7 @@ class Watch extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			running: false,
 			millisecondTen: 0,
 			millisecondHundred: 0,
 			secondOne: 0,
@@ -88,13 +89,27 @@ class Watch extends React.Component {
 	}
 
 	startDigits = () => {
-		this.timer = setInterval(() => {
-			this.tick();
-		}, 10);
+		const running = this.state.running;
+
+		if (running === false) {
+			this.timer = setInterval(() => {
+				this.tick();
+			}, 20); // error watch is runnning twice was fast
+		}
+
+		this.setState({
+			running: true
+		});
 	}
 
 	stopDigits = () => {
 		clearInterval(this.timer);
+
+		const running = this.state.running;
+
+		this.setState({
+			running: false
+		});
 	}
 
 
@@ -132,7 +147,5 @@ class Watch extends React.Component {
 		);
 	}
 }
-
-// logic to use milliseconds (accuacy)
 
 export default Watch;
