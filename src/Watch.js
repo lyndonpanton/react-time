@@ -6,16 +6,14 @@ class Watch extends React.Component {
 		super(props);
 		this.state = {
 			running: false,
-			time: {
-				millisecondTen: 0,
-				millisecondHundred: 0,
-				secondOne: 0,
-				secondTen: 0,
-				minuteOne: 0,
-				minuteTen: 0,
-				hourOne: 0,
-				hourTen: 0
-			}
+			millisecondTen: 0,
+			millisecondHundred: 0,
+			secondOne: 0,
+			secondTen: 0,
+			minuteOne: 0,
+			minuteTen: 0,
+			hourOne: 0,
+			hourTen: 0
 		}
 	}
 
@@ -67,10 +65,12 @@ class Watch extends React.Component {
 	}
 
 	resetDigits = () => {
-		for (let digit in this.state.time) { 
-			this.setState({
-				[digit]: 0
-			});
+		for (let digit in this.state) {
+			if (digit !== "running") {
+				this.setState({
+					[digit]: 0
+				});
+			}
 		}
 	}
 
