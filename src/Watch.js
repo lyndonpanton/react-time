@@ -112,6 +112,10 @@ class Watch extends React.Component {
 						<span className="second">{this.state.secondTen}</span>
 						<span className="second">{this.state.secondOne}</span>
 					</div>
+					<div className="milliseconds">
+						<span className="millisecond">{this.state.millisecondHundred}</span>
+							<span className="millisecond">{this.state.millisecondTen}</span>
+					</div>
 				</div>
 
 				<Button type="start" handleClick={() => this.startDigits()} />
