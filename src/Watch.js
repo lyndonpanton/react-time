@@ -67,7 +67,7 @@ class Watch extends React.Component {
 	}
 
 	resetDigits = () => {
-		for (let digit in this.state) {
+		for (let digit in this.state.time) { 
 			this.setState({
 				[digit]: 0
 			});
