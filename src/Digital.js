@@ -200,6 +200,18 @@ class Digital extends React.Component {
 						<span className="second">{this.state.secondTen}</span>
 						<span className="second">{this.state.secondOne}</span>
 					</div>
+					<div className="days">
+						<span className="day">{this.state.day}</span>
+					</div>
+					<div className="days">
+						<span className="day">{this.state.date}th</span>
+					</div>
+					<div className="days">
+						<span className="day">{this.state.month}</span>
+					</div>
+					<div className="days">
+						<span className="day">{this.state.year}</span>
+					</div>
 				</div>
 			</div>
 		);
