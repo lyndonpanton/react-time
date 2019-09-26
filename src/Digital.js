@@ -4,10 +4,10 @@ class Digital extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			day: "...",
-			date: "00",
-			month: "...",
-			year: "0000",
+			day: "---",
+			date: "--",
+			month: "---",
+			year: "----",
 			secondOne: 0,
 			secondTen: 0,
 			minuteOne: 0,
@@ -27,7 +27,7 @@ class Digital extends React.Component {
 		const seconds = String((new Date()).getSeconds());
 		const minutes = String((new Date()).getMinutes());
 		const hours = String((new Date()).getHours());
-		const date = String((new Date()).getDate());
+		let date = String((new Date()).getDate());
 		const day = String((new Date()).getDay());
 		const month = String((new Date()).getMonth() + 1);
 		const year = String((new Date()).getFullYear());
@@ -107,6 +107,16 @@ class Digital extends React.Component {
 			default:
 				console.log("an error occured");
 				break;
+		}
+
+		if (date === 1) {
+			date = date + "st";
+		} else if (date === 2) {
+			date = date + "nd";
+		} else if (date === 3) {
+			date = date + "rd";
+		} else {
+			date = date + "th";
 		}
 
 		this.setState({
@@ -204,7 +214,7 @@ class Digital extends React.Component {
 						<span className="day">{this.state.day}</span>
 					</div>
 					<div className="days">
-						<span className="day">{this.state.date}th</span>
+						<span className="day">{this.state.date}</span>
 					</div>
 					<div className="days">
 						<span className="day">{this.state.month}</span>
