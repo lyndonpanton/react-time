@@ -5,6 +5,8 @@ class Watch extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			millisecondTen: 0,
+			millisecondHundred: 0,
 			secondOne: 0,
 			secondTen: 0,
 			minuteOne: 0,
@@ -15,7 +17,7 @@ class Watch extends React.Component {
 	}
 
 	componentDidMount() {
-		
+
 	}
 
 	resetDigit = (digit) => {
@@ -120,5 +122,7 @@ class Watch extends React.Component {
 		);
 	}
 }
+
+// logic to use milliseconds (accuacy)
 
 export default Watch;
