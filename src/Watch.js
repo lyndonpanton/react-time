@@ -30,7 +30,7 @@ class Watch extends React.Component {
 				this.setDigit("millisecondHundred");
 				break;
 			case "millisecondHundred":
-				this.setDigit("millisecondTen");
+				this.setDigit("secondOne");
 				break;
 			case "secondOne":
 				this.setDigit("secondTen");
@@ -90,7 +90,7 @@ class Watch extends React.Component {
 	startDigits = () => {
 		this.timer = setInterval(() => {
 			this.tick();
-		}, 1000);
+		}, 10);
 	}
 
 	stopDigits = () => {
@@ -99,7 +99,7 @@ class Watch extends React.Component {
 
 
 	tick = () => {
-		this.setDigit("secondOne");
+		this.setDigit("millisecondTen");
 	}
 
 	render() {
