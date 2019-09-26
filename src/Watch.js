@@ -105,8 +105,6 @@ class Watch extends React.Component {
 	stopDigits = () => {
 		clearInterval(this.timer);
 
-		const running = this.state.running;
-
 		this.setState({
 			running: false
 		});
