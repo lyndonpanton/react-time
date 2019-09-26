@@ -1,8 +1,16 @@
 import React from "react";
 
-const Header = () => {
+const Header = (props) => {
 	return (
-
+		<header>
+			<nav>
+				<ul>
+					<li>Analog</li>
+					<li>Digital</li>
+					<li>Stop</li>
+				</ul>
+			</nav>
+		</header>
 	);
 };
 
