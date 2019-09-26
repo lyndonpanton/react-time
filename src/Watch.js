@@ -75,7 +75,7 @@ class Watch extends React.Component {
 	}
 
 	setDigit = (digit) => {
-		if (digit.slice(digit.length -3, digit.length) === "Ten" && digit !== "hourTen" && this.state[digit] > 4) {
+		if (digit.slice(digit.length -3, digit.length) === "Ten" && digit !== "hourTen" && digit !== "millisecondTen" && this.state[digit] > 4) {
 			this.setState({
 				[digit]: 0
 			});
@@ -96,7 +96,7 @@ class Watch extends React.Component {
 		if (running === false) {
 			this.timer = setInterval(() => {
 				this.tick();
-			}, 20); // error watch is runnning twice was fast
+			}, 10);
 		}
 
 		this.setState({
