@@ -4,6 +4,10 @@ class Digital extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			day: "...",
+			date: "00",
+			month: "...",
+			year: "0000",
 			secondOne: 0,
 			secondTen: 0,
 			minuteOne: 0,
