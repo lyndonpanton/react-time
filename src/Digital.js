@@ -27,6 +27,10 @@ class Digital extends React.Component {
 		const seconds = String((new Date()).getSeconds());
 		const minutes = String((new Date()).getMinutes());
 		const hours = String((new Date()).getHours());
+		const date = String((new Date()).getDate());
+		const day = String((new Date()).getDay());
+		const month = String((new Date()).getMonth() + 1);
+		const year = String((new Date()).getFullYear());
 
 		if (seconds.length > 1) {
 			this.setState({
@@ -63,6 +67,121 @@ class Digital extends React.Component {
 				hourTen: 0
 			});
 		}
+
+		switch (day) {
+			case "1":
+				this.setState({
+					day: "Monday"
+				});
+				break;
+			case "2":
+				this.setState({
+					day: "Tuesday"
+				});
+				break;
+			case "3":
+				this.setState({
+					day: "Wednesday"
+				});
+				break;
+			case "4":
+				this.setState({
+					day: "Thursday"
+				});
+				break;
+			case "5":
+				this.setState({
+					day: "Friday"
+				});
+				break;
+			case "6":
+				this.setState({
+					day: "Saturday"
+				});
+				break;
+			case "7":
+				this.setState({
+					day: "Sunday"
+				});
+				break;
+			default:
+				console.log("an error occured");
+				break;
+		}
+
+		this.setState({
+			date: date.length > 1 ? date : "0" + date
+		});
+
+		switch (month) {
+			case "1":
+				this.setState({
+					month: "January"
+				});
+				break;
+			case "2":
+				this.setState({
+					month: "February"
+				});
+				break;
+			case "3":
+				this.setState({
+					month: "March"
+				});
+				break;
+			case "4":
+				this.setState({
+					month: "April"
+				});
+				break;
+			case "5":
+				this.setState({
+					month: "May"
+				});
+				break;
+			case "6":
+				this.setState({
+					month: "June"
+				});
+				break;
+			case "7":
+				this.setState({
+					month: "July"
+				});
+				break;
+			case "8":
+				this.setState({
+					month: "August"
+				});
+				break;
+			case "9":
+				this.setState({
+					month: "September"
+				});
+				break;
+			case "10":
+				this.setState({
+					month: "October"
+				});
+				break;
+			case "11":
+				this.setState({
+					month: "November"
+				});
+				break;
+			case "12":
+				this.setState({
+					month: "December"
+				});
+				break;
+			default:
+				console.log("an error occured");
+				break;
+		}
+
+		this.setState({
+			year: year
+		});
 	}
 
 	render() {
