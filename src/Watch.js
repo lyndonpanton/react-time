@@ -6,14 +6,16 @@ class Watch extends React.Component {
 		super(props);
 		this.state = {
 			running: false,
-			millisecondTen: 0,
-			millisecondHundred: 0,
-			secondOne: 0,
-			secondTen: 0,
-			minuteOne: 0,
-			minuteTen: 0,
-			hourOne: 0,
-			hourTen: 0
+			time: {
+				millisecondTen: 0,
+				millisecondHundred: 0,
+				secondOne: 0,
+				secondTen: 0,
+				minuteOne: 0,
+				minuteTen: 0,
+				hourOne: 0,
+				hourTen: 0
+			}
 		}
 	}
 
