@@ -11,7 +11,6 @@ class App extends React.Component {
 		this.state = {
 			author: "Lyndon Panton",
 			rights: "All Rights Reserved",
-			symbol: "&#168",
 			year: (new Date()).getFullYear()
 		};
 	}
@@ -19,7 +18,6 @@ class App extends React.Component {
 	render() {
 		const author = this.state.author;
 		const rights = this.state.rights;
-		const symbol = this.state.symbol;
 		const year = this.state.year;
 
 		return (
@@ -27,7 +25,7 @@ class App extends React.Component {
 				<Header />
 				<Watch />
 				<Digital />
-				<Footer author={author} rights={rights} symbol={symbol} year={year} />
+				<Footer author={author} rights={rights} year={year} />
 			</div>
 		);
 	}
