@@ -7,3 +7,9 @@ gulp.task("sass", async function() {
 		.on("error", sass.logError)
 		.pipe(gulp.dest("src/App.css"));
 });
+
+gulp.task("default", gulp.series(["sass"]));
+
+gulp.task("watch", async function() {
+	gulp.watch("src/App.sass", gulp.series(["sass"]));
+});
