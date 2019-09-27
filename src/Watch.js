@@ -15,7 +15,7 @@ class Watch extends React.Component {
 			minuteTen: 0,
 			hourOne: 0,
 			hourTen: 0,
-			records : []
+			records: []
 		};
 	}
 
@@ -94,7 +94,7 @@ class Watch extends React.Component {
 
 	resetDigits = () => {
 		for (let digit in this.state) {
-			if (digit !== "running") {
+			if (digit !== "running" && digit !== "records") {
 				this.setState({
 					[digit]: 0
 				});
