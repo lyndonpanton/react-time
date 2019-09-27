@@ -11,6 +11,7 @@ const Record = (props) => {
 					<span className="second">{record.secondTen}{record.secondOne}:</span>
 					<span className="millsecond">{record.millisecondHundred}{record.millisecondTen}</span>
 				</div>
+				<button>Delete</button>
 			</div>
 		);
 	});
