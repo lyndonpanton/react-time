@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 const Record = (props) => {
 	const records = props.records.map(function(record, index) {
@@ -11,7 +12,9 @@ const Record = (props) => {
 					<span className="second">{record.secondTen}{record.secondOne}:</span>
 					<span className="millsecond">{record.millisecondHundred}{record.millisecondTen}</span>
 				</div>
-				<button>Delete</button>
+				<Button type="remove" handleClick={() => {
+					props.removeRecord(index)
+				}}/>
 			</div>
 		);
 	});
