@@ -14,9 +14,9 @@ const Record = (props) => {
 			</div>
 		);
 	});
-	
-	return (
 
+	return (
+		<div className="records">{records}</div>
 	);
 }
 
