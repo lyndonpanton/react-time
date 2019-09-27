@@ -8,7 +8,7 @@ const Footer = (props) => {
 				<span className="symbol">{props.symbol} </span> 
 				<span className="year"> {props.year} </span> 
 				<span className="author"> {props.author} | </span>
-				<span className="rights"> {props.right}</span>
+				<span className="rights"> {props.rights}</span>
 			</p>
 			<p className="credits">
 
