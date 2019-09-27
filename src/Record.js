@@ -5,12 +5,12 @@ const Record = (props) => {
 		return (
 			<div key={index} className="record">
 				<span className="recordIndex">{index + 1}</span>
-				<span className="recordTime">
-					{record.hourTen}{record.hourOne} : 
-					{record.minuteTen}{record.minuteOne} :
-					{record.secondTen}{record.secondOne} :
-					{record.millisecondTen}{record.millisecondOne}
-				</span>
+				<div className="recordTime">
+					<span className="hour">{record.hourTen}{record.hourOne}:</span>
+					<span className="minute">{record.minuteTen}{record.minuteOne}:</span>
+					<span className="second">{record.secondTen}{record.secondOne}:</span>
+					<span className="millsecond">{record.millisecondHundred}{record.millisecondTen}</span>
+				</div>
 			</div>
 		);
 	});
