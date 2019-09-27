@@ -25,4 +25,4 @@ class Record extends React.Component {
 	}
 }
 
-export default React;
+export default Record;
