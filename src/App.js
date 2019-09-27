@@ -4,6 +4,7 @@ import Digital from "./Digital";
 import Watch from "./Watch";
 import Footer from "./Footer";
 import "./index.css";
+import "./App.css";
 
 class App extends React.Component {
 	constructor(props) {
