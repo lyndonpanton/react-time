@@ -13,9 +13,9 @@ class Watch extends React.Component {
 			minuteOne: 0,
 			minuteTen: 0,
 			hourOne: 0,
-			hourTen: 0
+			hourTen: 0,
+			records : []
 		};
-		this.records = []
 	}
 
 	componentDidMount() {
@@ -66,16 +66,16 @@ class Watch extends React.Component {
 	}
 
 	recordDigits = () => {
-		this.handleRecord(
-			this.state.millisecondTen,
-			this.state.millisecondHundred,
-			this.state.secondOne,
-			this.state.secondTen,
-			this.state.minuteOne,
-			this.state.minuteTen,
-			this.state.hourOne,
-			this.state.hourTen,
-		);
+		this.handleRecord({
+			millisecondTen: this.state.millisecondTen,
+			millisecondHundred: this.state.millisecondHundred,
+			secondOne: this.state.secondOne,
+			secondTen: this.state.secondTen,
+			minuteOne: this.state.minuteOne,
+			minuteTen: this.state.minuteTen,
+			hourOne: this.state.hourOne,
+			hourTen: this.state.hourTen,
+		});
 	}
 
 	resetDigits = () => {
