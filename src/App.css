@@ -56,9 +56,19 @@ main .watch .buttons {
     border-color: #FFA900;
     background-color: #FFA900; }
 
-main .watch .records .record .remove {
-  border-color: #008800;
-  background-color: #008800; }
+main .watch .records .record {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10px 0; }
+  main .watch .records .record .record-index {
+    font-size: 1.8em; }
+  main .watch .records .record .record-time {
+    font-size: 1.8em; }
+  main .watch .records .record .remove {
+    border-color: #008800;
+    background-color: #008800; }
 
 main .watch .time {
   display: flex;
