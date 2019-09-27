@@ -7,6 +7,7 @@ const Header = (props) => {
 				<ul>
 					<li>Analog</li>
 					<li>Digital</li>
+					<li>Pomodoro</li>
 					<li>Stop</li>
 				</ul>
 			</nav>
