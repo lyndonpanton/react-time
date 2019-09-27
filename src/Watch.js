@@ -172,7 +172,7 @@ class Watch extends React.Component {
 				<Button type="reset" handleClick={() => this.resetDigits()} />
 				<Button type="record" handleClick={() => this.recordDigits()} />
 
-				<Record records={this.state.records} />
+				<Record records={this.state.records} removeRecord={this.removeRecord} />
 			</div>
 		);
 	}
