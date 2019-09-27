@@ -1,4 +1,17 @@
 header nav ul {
+  display: flex;
+  flex-direction: row;
   margin: 0;
-  padding: 0;
-  list-style-type: none; }
+  border-bottom: black solid 1px;
+  list-style-type: none;
+  padding: 0; }
+  header nav ul li {
+    flex: 1;
+    border-right: black solid 1px;
+    padding: 5px 0;
+    text-align: center;
+    color: black; }
+  header nav ul li:last-child {
+    border-right: none; }
+  header nav ul li.selected {
+    background-color: #99DDFF; }
