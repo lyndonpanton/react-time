@@ -14,7 +14,8 @@ class Watch extends React.Component {
 			minuteTen: 0,
 			hourOne: 0,
 			hourTen: 0
-		}
+		};
+		this.records = []
 	}
 
 	componentDidMount() {
