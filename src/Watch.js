@@ -22,8 +22,11 @@ class Watch extends React.Component {
 
 	}
 
-	handleRecord = () => {
-
+	handleRecord = (record) => {
+		const records = this.state.records;
+		this.setState({
+			records: records.concat([record])
+		});
 	}
 
 	resetDigit = (digit) => {
