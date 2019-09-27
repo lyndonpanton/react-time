@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Digital from "./Digital";
 import Watch from "./Watch";
+import Footer from "./Footer";
 import "./index.css";
 
 class App extends React.Component {
@@ -16,11 +17,17 @@ class App extends React.Component {
 	}
 
 	render() {
+		const author = this.state.author;
+		const rights = this.state.rights;
+		const symbol = this.state.symbol;
+		const year = this.state.year;
+
 		return (
 			<div className="app">
 				<Header />
 				<Watch />
 				<Digital />
+				<Footer author={author} rights={rights} symbol={symbol} year={year} />
 			</div>
 		);
 	}
