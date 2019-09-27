@@ -23,10 +23,39 @@ class Watch extends React.Component {
 
 	}
 
+	clearDigits = () => {
+		this.setState({
+			records: []
+		});
+	}
+
 	handleRecord = (record) => {
 		const records = this.state.records;
 		this.setState({
 			records: records.concat([record])
+		});
+	}
+
+	recordDigits = () => {
+		this.handleRecord({
+			millisecondTen: this.state.millisecondTen,
+			millisecondHundred: this.state.millisecondHundred,
+			secondOne: this.state.secondOne,
+			secondTen: this.state.secondTen,
+			minuteOne: this.state.minuteOne,
+			minuteTen: this.state.minuteTen,
+			hourOne: this.state.hourOne,
+			hourTen: this.state.hourTen,
+		});
+	}
+
+	removeRecord = (index) => {
+		const records = this.state.records;
+
+		this.setState({
+			records: records.filter(function(record, recordIndex) {
+				return index !== recordIndex;
+			})
 		});
 	}
 
@@ -67,29 +96,6 @@ class Watch extends React.Component {
 				console.log("an error occured");
 				break;
 		}
-	}
-
-	recordDigits = () => {
-		this.handleRecord({
-			millisecondTen: this.state.millisecondTen,
-			millisecondHundred: this.state.millisecondHundred,
-			secondOne: this.state.secondOne,
-			secondTen: this.state.secondTen,
-			minuteOne: this.state.minuteOne,
-			minuteTen: this.state.minuteTen,
-			hourOne: this.state.hourOne,
-			hourTen: this.state.hourTen,
-		});
-	}
-
-	removeRecord = (index) => {
-		const records = this.state.records;
-
-		this.setState({
-			records: records.filter(function(record, recordIndex) {
-				return index !== recordIndex;
-			})
-		});
 	}
 
 	resetDigits = () => {
@@ -172,6 +178,7 @@ class Watch extends React.Component {
 					<Button type="stop" handleClick={() => this.stopDigits()} />
 					<Button type="reset" handleClick={() => this.resetDigits()} />
 					<Button type="record" handleClick={() => this.recordDigits()} />
+					<Button type="clear" handleClick={() => this.clearDigits()} />
 				</div>
 
 				<Record records={this.state.records} removeRecord={this.removeRecord} />
