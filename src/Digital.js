@@ -200,12 +200,14 @@ class Digital extends React.Component {
 				<div className="time">
 					<div className="hours">
 						<span className="hour">{this.state.hourTen}</span>
-						<span className="hour">{this.state.hourOne}:</span>
+						<span className="hour">{this.state.hourOne}</span>
 					</div>
+					<span className="colon">:</span>
 					<div className="minutes">
 						<span className="minute">{this.state.minuteTen}</span>
-						<span className="minute">{this.state.minuteOne}:</span>
+						<span className="minute">{this.state.minuteOne}</span>
 					</div>
+					<span className="colon">:</span>
 					<div className="seconds">
 						<span className="second">{this.state.secondTen}</span>
 						<span className="second">{this.state.secondOne}</span>
