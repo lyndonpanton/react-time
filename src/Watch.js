@@ -167,10 +167,12 @@ class Watch extends React.Component {
 					</div>
 				</div>
 
-				<Button type="start" handleClick={() => this.startDigits()} />
-				<Button type="stop" handleClick={() => this.stopDigits()} />
-				<Button type="reset" handleClick={() => this.resetDigits()} />
-				<Button type="record" handleClick={() => this.recordDigits()} />
+				<div className="buttons">
+					<Button type="start" handleClick={() => this.startDigits()} />
+					<Button type="stop" handleClick={() => this.stopDigits()} />
+					<Button type="reset" handleClick={() => this.resetDigits()} />
+					<Button type="record" handleClick={() => this.recordDigits()} />
+				</div>
 
 				<Record records={this.state.records} removeRecord={this.removeRecord} />
 			</div>
