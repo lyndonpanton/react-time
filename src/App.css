@@ -16,6 +16,24 @@ header nav ul {
   header nav ul li.selected {
     background-color: #99DDFF; }
 
+main .watch .buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  main .watch .buttons .clear {
+    border-color: #FF0000;
+    background-color: #FF0000; }
+  main .watch .buttons .record {
+    border-color: #800080;
+    background-color: #800080; }
+  main .watch .buttons .start {
+    border-color: #55CC88;
+    background-color: #55CC88; }
+  main .watch .buttons .stop {
+    border-color: #FFA900;
+    background-color: #FFA900; }
+
 footer {
   padding: 100px 0;
   text-align: center;
