@@ -5,7 +5,7 @@ const Footer = (props) => {
 	return (
 		<footer>
 			<p className="copyright">
-				<span className="symbol">{props.symbol} </span> 
+				<span className="symbol">&#169; </span> 
 				<span className="year"> {props.year} </span> 
 				<span className="author"> {props.author} | </span>
 				<span className="rights"> {props.rights}</span>
