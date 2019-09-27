@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import Record from "./Record";
 
 class Watch extends React.Component {
 	constructor(props) {
@@ -160,6 +161,8 @@ class Watch extends React.Component {
 				<Button type="stop" handleClick={() => this.stopDigits()} />
 				<Button type="reset" handleClick={() => this.resetDigits()} />
 				<Button type="record" handleClick={() => this.recordDigits()} />
+
+				<Record records={this.state.records} />
 			</div>
 		);
 	}
