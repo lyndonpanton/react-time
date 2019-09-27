@@ -22,6 +22,10 @@ class Watch extends React.Component {
 
 	}
 
+	handleRecord = () => {
+
+	}
+
 	resetDigit = (digit) => {
 		this.setState({
 			[digit]: 0
@@ -62,7 +66,16 @@ class Watch extends React.Component {
 	}
 
 	recordDigits = () => {
-
+		this.handleRecord(
+			this.state.millisecondTen,
+			this.state.millisecondHundred,
+			this.state.secondOne,
+			this.state.secondTen,
+			this.state.minuteOne,
+			this.state.minuteTen,
+			this.state.hourOne,
+			this.state.hourTen,
+		);
 	}
 
 	resetDigits = () => {
