@@ -8,10 +8,13 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			author: "Lyndon Panton",
+			rights: "All Rights Reserved",
+			symbol: "&#168",
 			year: (new Date()).getFullYear()
 		};
 	}
-	
+
 	render() {
 		return (
 			<div className="app">
