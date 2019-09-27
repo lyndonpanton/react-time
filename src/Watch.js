@@ -82,6 +82,16 @@ class Watch extends React.Component {
 		});
 	}
 
+	removeRecord = (index) => {
+		const records = this.state.records;
+
+		this.setState({
+			records: records.filter(function(record, recordIndex) {
+				return index !== recordIndex;
+			})
+		});
+	}
+
 	resetDigits = () => {
 		for (let digit in this.state) {
 			if (digit !== "running") {
