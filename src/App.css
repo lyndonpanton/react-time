@@ -15,3 +15,9 @@ header nav ul {
     border-right: none; }
   header nav ul li.selected {
     background-color: #99DDFF; }
+
+footer {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #FBFBFB;
+  font-size: 0.9em; }
