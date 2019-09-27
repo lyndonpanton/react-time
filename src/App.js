@@ -23,8 +23,10 @@ class App extends React.Component {
 		return (
 			<div className="app">
 				<Header />
-				<Watch />
-				<Digital />
+				<main>
+					<Watch />
+					<Digital />
+				</main>
 				<Footer author={author} rights={rights} year={year} />
 			</div>
 		);
