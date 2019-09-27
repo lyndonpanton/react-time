@@ -34,6 +34,10 @@ main .watch .buttons {
     border-color: #FFA900;
     background-color: #FFA900; }
 
+main .watch .records .record .remove {
+  border-color: #008800;
+  background-color: #008800; }
+
 footer {
   padding: 100px 0;
   text-align: center;
