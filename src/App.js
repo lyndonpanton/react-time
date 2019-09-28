@@ -12,7 +12,13 @@ class App extends React.Component {
 		this.state = {
 			author: "Lyndon Panton",
 			rights: "All Rights Reserved",
-			year: (new Date()).getFullYear()
+			year: (new Date()).getFullYear(),
+			tabs: {
+				analog: false,
+				digital: true,
+				pomodoro: false,
+				stop: false
+			}
 		};
 	}
 
