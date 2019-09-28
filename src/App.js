@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "./Header";
+import Analog from "./Analog";
 import Digital from "./Digital";
+import Pomodoro from "./Pomodoro";
 import Stop from "./Stop";
 import Footer from "./Footer";
 import "./index.css";
@@ -54,10 +56,12 @@ class App extends React.Component {
 
 		return (
 			<div className="app">
-				<Header />
+				<Header tabs={this.state.tabs} handleClick={this.openTab} />
 				<main>
-					<Stop />
+					<Analog />
 					<Digital />
+					<Pomodoro />
+					<Stop />
 				</main>
 				<Footer author={author} rights={rights} year={year} />
 			</div>
