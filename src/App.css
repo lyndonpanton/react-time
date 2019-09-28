@@ -37,19 +37,6 @@ main .digital {
     main .digital .today span {
       margin-right: 2px;
       margin-left: 2px; }
-  main .digital .records .record {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 10px 0; }
-    main .digital .records .record .record-index {
-      font-size: 1.8em; }
-    main .digital .records .record .record-time {
-      font-size: 1.8em; }
-    main .digital .records .record .remove {
-      border-color: #008800;
-      background-color: #008800; }
 
 main .stop .buttons {
   display: flex;
@@ -68,6 +55,20 @@ main .stop .buttons {
   main .stop .buttons .stop {
     border-color: #FFA900;
     background-color: #FFA900; }
+
+main .stop .records .record {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10px 0; }
+  main .stop .records .record .record-index {
+    font-size: 1.8em; }
+  main .stop .records .record .record-time {
+    font-size: 1.8em; }
+  main .stop .records .record .remove {
+    border-color: #008800;
+    background-color: #008800; }
 
 main .stop .time {
   display: flex;
