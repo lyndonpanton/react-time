@@ -22,6 +22,31 @@ class App extends React.Component {
 		};
 	}
 
+	openTab = (event) => {
+		for (let tab in this.state.tabs) {
+			if (tab === event.target.textContent.toLowerCase()) {
+				let open = document.getElementsByClassName(tab)[0];
+				open.style.display = "block";
+
+				let tabs = this.state.tabs;
+				tabs[tab] = true;
+				this.setState({
+					tabs: tabs
+				})
+			} else {
+				let close = document.getElementsByClassName(tab)[0];
+				console.log(close);
+				close.style.display = "none";
+
+				let tabs = this.state.tabs;
+				tabs[tab] = true;
+				this.setState({
+					tabs: tabs
+				})
+			}
+		}
+	}
+
 	render() {
 		const author = this.state.author;
 		const rights = this.state.rights;
