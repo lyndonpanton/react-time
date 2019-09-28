@@ -24,6 +24,16 @@ class App extends React.Component {
 		};
 	}
 
+	componentDidMount() {
+		const tabs = this.state.tabs;
+		for (let tab in tabs) {
+			if (tabs[tab] === false) {
+				let close = document.getElementsByClassName(tab)[0];
+				close.style.display = "none";
+			}
+		}
+	}
+
 	openTab = (event) => {
 		for (let tab in this.state.tabs) {
 			if (tab === event.target.textContent.toLowerCase()) {
@@ -37,7 +47,6 @@ class App extends React.Component {
 				})
 			} else {
 				let close = document.getElementsByClassName(tab)[0];
-				console.log(close);
 				close.style.display = "none";
 
 				let tabs = this.state.tabs;
