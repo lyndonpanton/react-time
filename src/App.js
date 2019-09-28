@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Digital from "./Digital";
-import Watch from "./Watch";
+import Stop from "./Stop";
 import Footer from "./Footer";
 import "./index.css";
 import "./App.css";
@@ -25,7 +25,7 @@ class App extends React.Component {
 			<div className="app">
 				<Header />
 				<main>
-					<Watch />
+					<Stop />
 					<Digital />
 				</main>
 				<Footer author={author} rights={rights} year={year} />
