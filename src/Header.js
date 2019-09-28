@@ -5,10 +5,10 @@ const Header = (props) => {
 		<header>
 			<nav>
 				<ul>
-					<li onClick={(event) => props.openTab(event.target)}>Analog</li>
-					<li onClick={(event) => props.openTab(event.target)}>Digital</li>
-					<li onClick={(event) => props.openTab(event.target)}>Pomodoro</li>
-					<li onClick={(event) => props.openTab(event.target)}>Stop</li>
+					<li onClick={(event) => props.handleClick(event)}>Analog</li>
+					<li onClick={(event) => props.handleClick(event)}>Digital</li>
+					<li onClick={(event) => props.handleClick(event)}>Pomodoro</li>
+					<li onClick={(event) => props.handleClick(event)}>Stop</li>
 				</ul>
 			</nav>
 		</header>
