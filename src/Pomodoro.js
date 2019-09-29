@@ -11,7 +11,41 @@ class Pomodoro extends React.Component {
 	render() {
 		return (
 			<div className="pomodoro">
-				TODO
+				<div className="column">
+					<div className="arrow-up"></div>
+					<div className="digit">0</div>
+					<div className="arrow-down"></div>
+				</div>
+
+				<div className="column">
+					<div className="arrow-up"></div>
+					<div className="digit">0</div>
+					<div className="arrow-down"></div>
+				</div>
+
+				<div className="column">
+					<div className="arrow-up"></div>
+					<div className="digit">0</div>
+					<div className="arrow-down"></div>
+				</div>
+
+				<div className="column">
+					<div className="arrow-up"></div>
+					<div className="digit">0</div>
+					<div className="arrow-down"></div>
+				</div>
+
+				<div className="column">
+					<div className="arrow-up"></div>
+					<div className="digit">0</div>
+					<div className="arrow-down"></div>
+				</div>
+
+				<div className="column">
+					<div className="arrow-up"></div>
+					<div className="digit">0</div>
+					<div className="arrow-down"></div>
+				</div>
 			</div>
 		);
 	} 
