@@ -38,19 +38,31 @@ main .digital {
       margin-right: 2px;
       margin-left: 2px; }
 
-main .pomodoro .column .arrow-down {
-  border-top: #313131 solid 30px;
-  border-right: transparent solid 20px;
-  border-left: transparent solid 20px;
-  width: 0px;
-  height: 0px; }
-
-main .pomodoro .column .arrow-up {
-  border-right: transparent solid 20px;
-  border-bottom: #313131 solid 30px;
-  border-left: transparent solid 20px;
-  width: 0px;
-  height: 0px; }
+main .pomodoro .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  main .pomodoro .column .arrow-down {
+    border-top: #313131 solid 30px;
+    border-right: transparent solid 20px;
+    border-left: transparent solid 20px;
+    width: 0px;
+    height: 0px; }
+  main .pomodoro .column .arrow-down:active {
+    border-top-color: #AACCEE; }
+  main .pomodoro .column .arrow-up {
+    border-right: transparent solid 20px;
+    border-bottom: #313131 solid 30px;
+    border-left: transparent solid 20px;
+    width: 0px;
+    height: 0px; }
+  main .pomodoro .column .arrow-up:active {
+    border-bottom-color: #AACCEE; }
+  main .pomodoro .column .digit {
+    font-size: 1.5em; }
 
 main .stop .buttons {
   display: flex;

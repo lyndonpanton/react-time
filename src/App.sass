@@ -49,19 +49,33 @@ main
 				margin-right: 2px
 				margin-left: 2px
 	.pomodoro
+
 		.column
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
+			margin-top: 10px
+			margin-bottom: 10px
 			.arrow-down
 				border-top: #313131 solid 30px
 				border-right: transparent solid 20px
 				border-left: transparent solid 20px
 				width: 0px
 				height: 0px
+			.arrow-down:active
+				border-top-color: #AACCEE
 			.arrow-up
 				border-right: transparent solid 20px
 				border-bottom: #313131 solid 30px
 				border-left: transparent solid 20px
 				width: 0px
 				height: 0px
+			.arrow-up:active
+				border-bottom-color: #AACCEE
+			.digit
+				font-size: 1.5em
 
 	.stop
 		.buttons
