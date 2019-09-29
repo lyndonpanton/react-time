@@ -15,11 +15,21 @@ class Pomodoro extends React.Component {
 	}
 
 	add = (digit) => {
-
+		const current = this.state[digit];
+		if (current < 9) {
+			this.setState({
+				[digit]: current + 1
+			});
+		}
 	}
 
 	minus = (digit) => {
-
+		const current = this.state[digit];
+		if (current > 0) {
+			this.setState({
+				[digit]: current - 1
+			});
+		}
 	}
 
 	tick = () => {
