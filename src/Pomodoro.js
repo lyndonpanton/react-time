@@ -17,39 +17,39 @@ class Pomodoro extends React.Component {
 		return (
 			<div className="pomodoro">
 				<div className="column">
-					<div className="arrow-up"></div>
+					<div className="arrow-up" tabindex="0"></div>
 					<div className="digit">{this.state.hourTen}</div>
-					<div className="arrow-down"></div>
+					<div className="arrow-down" tabindex="0"></div>
 				</div>
 
 				<div className="column">
-					<div className="arrow-up"></div>
+					<div className="arrow-up" tabindex="0"></div>
 					<div className="digit">{this.state.hourOne}</div>
-					<div className="arrow-down"></div>
+					<div className="arrow-down" tabindex="0"></div>
 				</div>
 
 				<div className="column">
-					<div className="arrow-up"></div>
+					<div className="arrow-up" tabindex="0"></div>
 					<div className="digit">{this.state.minuteTen}</div>
-					<div className="arrow-down"></div>
+					<div className="arrow-down" tabindex="0"></div>
 				</div>
 
 				<div className="column">
-					<div className="arrow-up"></div>
+					<div className="arrow-up" tabindex="0"></div>
 					<div className="digit">{this.state.minuteOne}</div>
-					<div className="arrow-down"></div>
+					<div className="arrow-down" tabindex="0"></div>
 				</div>
 
 				<div className="column">
-					<div className="arrow-up"></div>
+					<div className="arrow-up" tabindex="0"></div>
 					<div className="digit">{this.state.secondTen}</div>
-					<div className="arrow-down"></div>
+					<div className="arrow-down" tabindex="0"></div>
 				</div>
 
 				<div className="column">
-					<div className="arrow-up"></div>
+					<div className="arrow-up" tabindex="0"></div>
 					<div className="digit">{this.state.secondOne}</div>
-					<div className="arrow-down"></div>
+					<div className="arrow-down" tabindex="0"></div>
 				</div>
 			</div>
 		);
