@@ -69,6 +69,11 @@ class Digital extends React.Component {
 		}
 
 		switch (day) {
+			case "0":
+				this.setState({
+					day: "Sunday"
+				});
+				break;
 			case "1":
 				this.setState({
 					day: "Monday"
@@ -97,11 +102,6 @@ class Digital extends React.Component {
 			case "6":
 				this.setState({
 					day: "Saturday"
-				});
-				break;
-			case "7":
-				this.setState({
-					day: "Sunday"
 				});
 				break;
 			default:
