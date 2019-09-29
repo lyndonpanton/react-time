@@ -23,6 +23,10 @@ class Pomodoro extends React.Component {
 		}
 	}
 
+	countdown = () => {
+		
+	}
+
 	minus = (digit) => {
 		const current = this.state[digit];
 		if (current > 0) {
@@ -33,7 +37,18 @@ class Pomodoro extends React.Component {
 	}
 
 	tick = () => {
+		if (this.timer === undefined) {
+	 		this.timer = setInterval(() => {
+				this.countdown();
+			}, 1000);
+		} else {
+			this.stop();
+		}
+	}
 
+	stop = () => {
+		clearInterval(this.timer);
+		this.timer = undefined;
 	}
 
 	render() {
