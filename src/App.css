@@ -38,6 +38,20 @@ main .digital {
       margin-right: 2px;
       margin-left: 2px; }
 
+main .pomodoro .column .arrow-down {
+  border-top: #313131 solid 30px;
+  border-right: transparent solid 20px;
+  border-left: transparent solid 20px;
+  width: 0px;
+  height: 0px; }
+
+main .pomodoro .column .arrow-up {
+  border-right: transparent solid 20px;
+  border-bottom: #313131 solid 30px;
+  border-left: transparent solid 20px;
+  width: 0px;
+  height: 0px; }
+
 main .stop .buttons {
   display: flex;
   flex-direction: row;
