@@ -38,6 +38,10 @@ main .digital {
       margin-right: 2px;
       margin-left: 2px; }
 
+main .pomodoro button {
+  display: block;
+  margin: 20px auto; }
+
 main .pomodoro .column {
   display: flex;
   flex-direction: column;
