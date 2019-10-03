@@ -28,7 +28,47 @@ class Pomodoro extends React.Component {
 	}
 
 	countdown = (digit) => {
-		
+		if (!this.minus(digit)) {
+			switch(digit) {
+				case "secondOne":
+					this.minus("secondTen");
+					break;
+				case "secondTen":
+					this.resetDigit("secondOne");
+					this.minus("minuteOne");
+					break;
+				case "minuteOne":
+					this.resetDigit("secondTen");
+					this.minus("minuteTen");
+					break;
+				case "minuteTen":
+					this.resetDigit("minuteOne");
+					this.minus("hourOne");
+					break;
+				case "hourOne":
+					this.resetDigit("minuteTen");
+					this.minus("hourTen");
+					break;
+				case "hourTen":
+					this.resetDigit("hourOne");
+					this.minus("hourOne");
+					this.stop();
+					break;
+				default:
+					this.stop();
+					break;
+			}
+		}
+
+		const digits = this.state;
+		let sum = 0;
+		for (let prop in digits) {
+			sum = sum + digits[prop];
+		}
+		console.log(sum);
+		if (sum === 0) {
+			this.stop();
+		}
 	}
 
 	minus = (digit) => {
@@ -44,6 +84,23 @@ class Pomodoro extends React.Component {
 		}
 	}
 
+	resetDigit = (digit) => {
+		if ((digit.slice(digit.length - 3, digit.length) !== "Ten" || digit === "hourTen")) {
+			this.setState({
+				[digit]: 9
+			});
+		} else {
+			this.setState({
+				[digit]: 5
+			});
+		}
+	}
+
+	stop = () => {
+		clearInterval(this.timer);
+		this.timer = undefined;
+	}
+
 	tick = () => {
 		if (this.timer === undefined) {
 	 		this.timer = setInterval(() => {
@@ -52,11 +109,6 @@ class Pomodoro extends React.Component {
 		} else {
 			this.stop();
 		}
-	}
-
-	stop = () => {
-		clearInterval(this.timer);
-		this.timer = undefined;
 	}
 
 	render() {
