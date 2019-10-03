@@ -1,3 +1,49 @@
+# React Time
+
+## How To Open
+> 1. Install node globally
+> 2. Navigate to application download folder in terminal
+> 3. Run _npm start_
+> 4. View application in browser at _localhost:3000_
+
+## How To Use
+1. Analog
+    - N/A
+2. Digital
+	- Watch digits to see time
+3. Pomodoro
+	- Press arrows to define time
+	- Press countdown button to toggle countdown
+4. Stop
+	- Press _start_ button to run timer
+	- Press _stop_ button to stop timer
+	- Press _reset_ button to reset timer
+	- Press _record_ button to record time
+	- Press _clear_ button to clear recorded times
+
+## Requirements
+> 1. This application requires a browser to run
+> 2. The browser must have JavaScript available and enabled
+
+## Errors
+1. Analog
+	- Section has not been started
+2. Digital
+	- N/A
+3. Pomodoro
+	- Countdown logic is not correct
+4. Stop
+	- N/A
+
+## User Stories
+> 1. Application made with _React_
+> 2. Used multiple component files
+> 3. Used stateless, stateful components
+> 4. Handled, passed props and state
+> 5. Users can see the current time
+> 6. Users can use full functions of stop watch
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
