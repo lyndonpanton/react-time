@@ -63,13 +63,13 @@ class App extends React.Component {
 		const rights = this.state.rights;
 		const year = this.state.year;
 
+		/* add analog, pomodoro clocks */
+
 		return (
 			<div className="app">
 				<Header tabs={this.state.tabs} handleClick={this.openTab} />
 				<main>
-					<Analog />
 					<Digital />
-					<Pomodoro />
 					<Stop />
 				</main>
 				<Footer author={author} rights={rights} year={year} />
